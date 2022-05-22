@@ -11,7 +11,7 @@ export default function Header(props) {
       <Img src={HeaderLogo} />
       <LinkContainer>
         <StyledLink to='/'>Home</StyledLink>
-        <StyledLink to='/'>Premiações</StyledLink>
+        <StyledLink to='/awards'>Premiações</StyledLink>
         <StyledLink to='/'>Crie a sua</StyledLink>
         <FadeMenu />
       </LinkContainer>
