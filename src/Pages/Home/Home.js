@@ -2,6 +2,9 @@ import Header from "../../Components/Header";
 import styled from "styled-components";
 import PageLogo from "../../Assets/PageLogo.png";
 import Triangle from "../../Assets/Triangle.png";
+import Recent from "../../Assets/Recent.png";
+import Random from "../../Assets/Random.png";
+import Award from "../../Components/Award";
 
 
 export default function Home() {
@@ -12,7 +15,25 @@ export default function Home() {
       <Header />
       <Logo src={PageLogo}/>
       <Button>Crie a sua</Button>
-      <Img src={Triangle}/>
+      <TriangleImg src={Triangle}/>
+      <RecentRandomImg src={Recent}/>
+      <AwardContainer>
+        <Award />
+        <Award />
+        <Award />
+        <Award />
+        <Award />
+        <Award />
+      </AwardContainer>
+      <RecentRandomImg src={Random}/>
+      <AwardContainer>
+        <Award />
+        <Award />
+        <Award />
+        <Award />
+        <Award />
+        <Award />
+      </AwardContainer>
     </Container>
   )
 }
@@ -44,6 +65,18 @@ const Button = styled.button`
   color: #000000;
 `
 
-const Img = styled.img`
-  width: 100%
+const TriangleImg = styled.img`
+  width: 100%;
+  margin-bottom: 130px;
+`
+
+const RecentRandomImg = styled.img`
+  margin-bottom: 25px;
+`
+
+const AwardContainer = styled.div`
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
