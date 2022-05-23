@@ -16,10 +16,7 @@ export default function AwardCreation() {
     name: '',
     image: '',
     isPrivate: '',
-    stage: '',
-    categoryNumber: '',
-    optionsNumber: '',
-    nominateEndDate: '',
+    stage: 'votação',
     voteEndDate: ''
   })
 
@@ -53,12 +50,12 @@ export default function AwardCreation() {
             <TextField required label='Imagem' placeholder='Link para a imagem da premiação' sx={{width: '500px'}} type='url' value={formData.image} onChange={handleFreeFormInput} name='image'/>
             <InputContainer>
               <Autocomplete options={['true', 'false']} renderInput={(params) => <TextField {...params} label="É privado?" />} sx={{width: '150px'}} onInputChange={(e, value) => handleFormInput("isPrivate", value)}/>
-              <Autocomplete options={['votação', 'indicação']} renderInput={(params) => <TextField {...params} label="Estágio inicial" />} sx={{width: '200px'}} onInputChange={(e, value) => handleFormInput("stage", value)}/>
+              {/*<Autocomplete options={['votação', 'indicação']} renderInput={(params) => <TextField {...params} label="Estágio inicial" />} sx={{width: '200px'}} onInputChange={(e, value) => handleFormInput("stage", value)}/>*/}
             </InputContainer>
-            <InputContainer>
+            {/*<InputContainer>
               <Autocomplete options={arr} renderInput={(params) => <TextField {...params} label="Quantas categorias?" />} sx={{width: '200px'}} onInputChange={(e, value) => handleFormInput("categoryNumber", value)}/>
               {formData.stage === 'votação'? <Autocomplete options={arr} renderInput={(params) => <TextField {...params} label="Quantas opções por categoria?" />} sx={{width: '250px'}} onInputChange={(e, value) => handleFormInput("optionsNumber", value)}/> : null}
-            </InputContainer>
+            </InputContainer>*/}
             <InputContainer>
               <TextField required label="Fim da votação" sx={{width: '200px'}} value={formData.voteEndDate} onChange={handleFreeFormInput} name='voteEndDate' type='date'/>
               {formData.stage === 'indicação' ? <TextField required label="Fim das indicações" sx={{width: '200px'}} value={formData.nominateEndDate} onChange={handleFreeFormInput} name='nominateEndDate' type='date'/> : null}
