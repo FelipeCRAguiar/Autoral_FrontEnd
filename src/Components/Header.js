@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HeaderLogo from "../Assets/HeaderLogo.png";
 import FadeMenu from "./Menu";
 
-export default function Header(props) {
+export default function Header() {
   
 
   return (
@@ -12,7 +12,7 @@ export default function Header(props) {
       <LinkContainer>
         <StyledLink to='/'>Home</StyledLink>
         <StyledLink to='/awards'>Premiações</StyledLink>
-        <StyledLink to='/'>Crie a sua</StyledLink>
+        <StyledLink to='/create'>Crie a sua</StyledLink>
         <FadeMenu />
       </LinkContainer>
     </Container>

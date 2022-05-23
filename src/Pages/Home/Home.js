@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Header from "../../Components/Header";
 import styled from "styled-components";
 import PageLogo from "../../Assets/PageLogo.png";
@@ -7,14 +8,20 @@ import Random from "../../Assets/Random.png";
 import Award from "../../Components/Award";
 
 
+
 export default function Home() {
-  
+  const navigate = useNavigate();
+
+
+  function handleClick(e) {
+    navigate("/create")
+  }
 
   return (
     <Container>
       <Header />
       <Logo src={PageLogo}/>
-      <Button>Crie a sua</Button>
+      <Button onClick={handleClick} style={{ cursor: "pointer" }}>Crie a sua</Button>
       <TriangleImg src={Triangle}/>
       <RecentRandomImg src={Recent}/>
       <AwardContainer>
