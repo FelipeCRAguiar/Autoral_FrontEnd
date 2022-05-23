@@ -112,14 +112,6 @@ const BottomContainer = styled.div`
   margin-top: 20px;
 `
 
-const SelectionContainer = styled.div`
-  width: 200px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
-
 const StyledLink = styled(Link)`
   font-family: 'Roboto';
   font-weight: 400;

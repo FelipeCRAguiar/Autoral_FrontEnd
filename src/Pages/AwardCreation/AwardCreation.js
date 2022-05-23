@@ -5,12 +5,11 @@ import Rectangle from "../../Assets/Rectangle.png";
 import ReverseTriangle from "../../Assets/ReverseTriangle.png"
 import { Autocomplete, Button, TextField } from "@mui/material";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
 export default function AwardCreation() {
-  const navigate = useNavigate();
   const arr = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
   const [isDisabled, setIsDisabled] = useState(false)
   const [formData, setFormData] = useState({
@@ -25,13 +24,13 @@ export default function AwardCreation() {
   })
 
   function handleFormInput(name, value) {
-
     setFormData({ ...formData, [name]: value })
     console.log(formData)
 
   }
 
   function handleFreeFormInput(e) {
+    e.preventDefault();
     setFormData({ ...formData, [e.target.name]: e.target.value })
     console.log(formData)
   }
@@ -65,7 +64,7 @@ export default function AwardCreation() {
               {formData.stage === 'indicação' ? <TextField required label="Fim das indicações" sx={{width: '200px'}} value={formData.nominateEndDate} onChange={handleFreeFormInput} name='nominateEndDate' type='date'/> : null}
             </InputContainer>
             <Button variant="contained" onClick={handleSubmit}>
-              <StyledLink to='/' state={formData}>Proxima etapa</StyledLink>
+              <StyledLink to='/create-category' state={formData}>Proxima etapa</StyledLink>
             </Button>
           </Form>
         </FormContainer>
