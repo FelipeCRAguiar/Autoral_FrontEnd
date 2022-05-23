@@ -5,6 +5,7 @@ import AwardPage from "./Pages/AwardPage/AwardPage";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
+import SingleAwardPage from "./Pages/SingleAwardPage/SingleAwardPage";
 import "./Styles/reset.css";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/awards" element={<AwardPage />}/>
         <Route path="/create" element={<AwardCreation />}/>
         <Route path="/create-category" element={<CategoryCreation />}/>
+        <Route path="/award/nominate/:id" element={<SingleAwardPage />}/>
       </Routes>
     </BrowserRouter>
   )
